@@ -2,13 +2,18 @@
 
 ## Step 1. Install Prerequisites
 In order to use ESP-IDF with the ESP32, you need to install `CMake, ccache, python3` and `Ninja`
+- Check if your Mac has Homebrew or MacPorts.
+```bash
+brew --version
+port version
+```
 - If you have `HomeBrew`, you can run:
 ```bash
 brew install cmake ninja dfu-util
 brew install ccache
 brew install python3
 ```
--If you have `MacPorts`, you can run:
+- If you have `MacPorts`, you can run:
 ```bash
 sudo port install cmake ninja dfu-util
 sudo port install ccache
