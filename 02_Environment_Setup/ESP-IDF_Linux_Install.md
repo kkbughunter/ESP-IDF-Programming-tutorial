@@ -1,5 +1,5 @@
 
-# **ESP-IDF Installation on macOS**
+# **ESP-IDF Installation on Linux**
 
 ## **Step 1: Install Prerequisites**
 
@@ -112,12 +112,10 @@ To simplify the process, you can set an environment variable to the path of your
 2. Add the following line at the end of the file:
    ```bash
    # Set ESP-IDF path
-    export ESP_IDF="/Users/karthikeyana/development/esp-idf"
-    export PATH="$ESP_IDF:$PATH"
-    alias get_idf="source /Users/karthikeyana/development/esp-idf/export.sh"
+    alias get_idf="source /home/karthikeyana/development/esp/esp-idf/export.sh"
    ```
 
-   Replace `/Users/your_user_name/development/esp-idf` with the correct path to your ESP-IDF directory.
+   Replace `/home/your_user_name/developmentesp/esp-idf` with the correct path to your ESP-IDF directory.
 
 3. **Apply changes:**
    ```bash
@@ -171,23 +169,20 @@ idf.py build
 
 ### **Flash the ESP32:**
 
-On macOS:
+On Linux:
 - Plug in your ESP32 board to your computer.
 - Check available serial ports: Open a terminal and run the following command:
 
 ```bash
-ls /dev/cu.*
 ```
-You should see a list of devices. The ESP32 should appear as something like `/dev/cu.SLAB_USBtoUART`, `/dev/cu.usbserial-xxxx`, or similar.
+You should see a list of devices.
 ```bash
-idf.py -p /dev/cu.usbserial-58B90210071 flash
 ```
 
 ### **Monitor the Serial Output:**
 
 To monitor the output of the ESP32:
 ```bash
-idf.py -p /dev/cu.usbserial-58B90210071 monitor
 ```
 
 ---
